@@ -1,3 +1,9 @@
+sqlcipher (4.3.0) UNRELEASED; urgency=medium
+
+  * Latest release
+
+ --  Nav <linuxgndu@gmail.com>  Thu, 30 Apr 2020 22:16:03 -0500
+
 sqlcipher (3.2.0-1.1) unstable; urgency=high
 
   [ Ben Carrillo ]
