@@ -1,0 +1,25 @@
+--- sqlcipher-3.2.0.orig/Makefile.in
++++ sqlcipher-3.2.0/Makefile.in
+@@ -530,18 +530,20 @@ sqlcipher.pc: $(TOP)/sqlcipher.pc.in
+ libsqlcipher.la:	$(LIBOBJ)
+ 	$(LTLINK) -o $@ $(LIBOBJ) $(TLIBS) \
+ 		${ALLOWRELEASE} -rpath "$(libdir)" -version-info "8:6:8"
++	sed -i "/dependency_libs/s/'.*'/''/" $@
+ 
+ libtclsqlite3.la:	tclsqlite.lo libsqlcipher.la
+ 	$(LTLINK) -o $@ tclsqlite.lo \
+-		libsqlcipher.la @TCL_STUB_LIB_SPEC@ $(TLIBS) \
++		libsqlcipher.la @TCL_STUB_LIB_SPEC@ \
+ 		-rpath "$(TCLLIBDIR)" \
+ 		-version-info "8:6:8" \
+ 		-avoid-version
++	sed -i "/dependency_libs/s/'.*'/''/" $@
+ 
+ sqlcipher$(TEXE):	$(TOP)/src/shell.c libsqlcipher.la sqlite3.h
+ 	$(LTLINK) $(READLINE_FLAGS) \
+ 		-o $@ $(TOP)/src/shell.c libsqlcipher.la \
+-		$(LIBREADLINE) $(TLIBS) -rpath "$(libdir)"
++		$(LIBREADLINE) -rpath "$(libdir)"
+ 
+ mptester$(EXE):	sqlite3.c $(TOP)/mptest/mptest.c
+ 	$(LTLINK) -o $@ -I. $(TOP)/mptest/mptest.c sqlite3.c \

@@ -1,0 +1,5 @@
+usr/include/sqlcipher/*.h
+usr/lib/${DEB_HOST_MULTIARCH}/libsqlcipher.a
+usr/lib/${DEB_HOST_MULTIARCH}/libsqlcipher.so
+usr/lib/${DEB_HOST_MULTIARCH}/libsqlcipher.la
+usr/lib/${DEB_HOST_MULTIARCH}/pkgconfig/sqlcipher.pc

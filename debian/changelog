@@ -1,0 +1,50 @@
+sqlcipher (3.2.0-1.1) unstable; urgency=high
+
+  [ Ben Carrillo ]
+  * Non-maintainer upload.
+  * use a separate variable to track SQLCIPHER version (Closes: #776987)
+
+ -- Micah Anderson <micah@debian.org>  Wed, 22 Apr 2015 10:38:05 -0400
+
+sqlcipher (3.2.0-1) unstable; urgency=low
+
+  * updated to latest upstream: v3.2.0
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Thu, 16 Oct 2014 22:55:08 -0400
+
+sqlcipher (2.2.1-3) unstable; urgency=low
+
+  [ Fernando Seiti Furusato ]
+  * use autoreconf and autotools-dev to build on new arches (Closes: #755939)
+
+  [ Hans-Christoph Steiner ]
+  * fix libname in pkgconfig (Closes: #741907)
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Thu, 31 Jul 2014 14:05:38 -0400
+
+sqlcipher (2.2.1-2) unstable; urgency=low
+
+  * set SQLITE_TEMP_STORE=2, as required by upstream (Closes: #726464)
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Tue, 15 Oct 2013 22:54:33 -0400
+
+sqlcipher (2.2.1-1) unstable; urgency=low
+
+  * update to latest upstream release
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Tue, 13 Aug 2013 15:43:45 -0400
+
+sqlcipher (2.1.1-2) unstable; urgency=low
+
+  * update debian/watch from submission from Bart Martens
+  * updated description with text from http://sqlcipher.net
+  * moving from experimental to unstable, its ready!
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Tue, 04 Jun 2013 13:30:19 -0400
+
+sqlcipher (2.1.1-1) experimental; urgency=low
+
+  * Initial release. (Closes: #628169)
+
+ -- Hans-Christoph Steiner <hans@eds.org>  Thu, 17 Jan 2013 14:41:50 -0500
+

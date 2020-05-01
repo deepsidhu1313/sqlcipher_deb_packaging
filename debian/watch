@@ -1,0 +1,4 @@
+version=3
+https://github.com/sqlcipher/sqlcipher/tags \
+.*/archive/(?:upstream/)?(?:v||version-|release-|X|R|r|Version_)(\d\S*)\.tar\.gz
+# Bart Martens <bartm@debian.org>  Wed, 22 May 2013 04:56:45 +0000

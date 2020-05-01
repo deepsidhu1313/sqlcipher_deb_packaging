@@ -1,0 +1,8 @@
+--- a/sqlcipher.pc.in
++++ b/sqlcipher.pc.in
+@@ -10,4 +10,4 @@ Description: SQL database engine
+ Version: @SQLCIPHER_VERSION@
+ Libs: -L${libdir} -lsqlcipher
+ Libs.private: @LIBS@
+-Cflags: -I${includedir}
++Cflags: -I${includedir}/sqlcipher
