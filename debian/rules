@@ -39,8 +39,7 @@ configure-stamp:
 		--enable-json1 \
 	  --disable-tcl \
 	  --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-	  --libexecdir=\$${libdir}/sqlcipher \
-	  $(DDEBUG)
+	  --libexecdir=\$${libdir}/sqlcipher
 
 	# remove double -ldl from sqlcipher.pc
 	sed -i "s/\([-ldl .+]\) -ldl/\1/" sqlcipher.pc
