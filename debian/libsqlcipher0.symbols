@@ -1,4 +1,5 @@
 libsqlcipher.so.0 libsqlcipher0 4.5.5-0~
+#MISSING: 4.5.5-0~202308171705~568~202311050541~ubuntu20.04.1# #MISSING: 4.5.5-0~
  sqlcipherCodecAttach@Base 4.5.5-0~
  sqlcipherCodecGetKey@Base 4.5.5-0~
  sqlcipherPagerCodec@Base 4.5.5-0~
@@ -369,5 +370,6 @@ libsqlcipher.so.0 libsqlcipher0 4.5.5-0~
  sqlite3_wal_checkpoint_v2@Base 1.1.9
  sqlite3_wal_hook@Base 1.1.9
  sqlite3pager_error@Base 3.2.0-1.1
- sqlite3pager_is_mj_pgno@Base 4.5.5-0~
+ #MISSING: 4.5.5-0~ # sqlite3pager_is_mj_pgno@Base 4.5.5-0~
+ sqlite3pager_is_sj_pgno@Base 4.5.5-0~
  sqlite3pager_reset@Base 3.2.0-1.1
