@@ -1,5 +1,5 @@
 libsqlcipher.so.0 libsqlcipher0 4.5.5-0~
-#MISSING: 4.5.5-0~202308171705~568~202311050541~ubuntu20.04.1# #MISSING: 4.5.5-0~
+#MISSING: 4.5.5-0~ #
  sqlcipherCodecAttach@Base 4.5.5-0~
  sqlcipherCodecGetKey@Base 4.5.5-0~
  sqlcipherPagerCodec@Base 4.5.5-0~
