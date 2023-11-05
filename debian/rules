@@ -105,7 +105,6 @@ binary-arch: build install
 	dh_installman -a
 	dh_installdocs -a
 	dh_installchangelogs -a
-	dh_strip -a --dbg-package=libsqlcipher0-dbg
 	dh_compress -a
 	dh_fixperms -a
 	dh_makeshlibs -a
