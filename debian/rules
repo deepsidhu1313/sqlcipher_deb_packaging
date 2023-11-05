@@ -109,7 +109,7 @@ binary-arch: build install
 	dh_strip --dbgsym-migration='libsqlcipher0-dbg (<< 4.5.5-0~)'
 	dh_compress -a
 	dh_fixperms -a
-	dh_makeshlibs -a
+	dh_makeshlibs -a -- -c0
 	dh_installdeb -a
 	dh_shlibdeps -a -Ldebian/libsqlcipher0/usr/lib/$(DEB_HOST_MULTIARCH)
 	dh_gencontrol -a
