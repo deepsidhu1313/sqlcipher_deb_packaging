@@ -39,7 +39,8 @@ configure-stamp:
 		--enable-json1 \
 	  --disable-tcl \
 	  --libdir=\$${prefix}/lib/$(DEB_HOST_MULTIARCH) \
-	  --libexecdir=\$${libdir}/sqlcipher
+	  --libexecdir=\$${libdir}/sqlcipher \
+	  $(DDEBUG)
 
 	# remove double -ldl from sqlcipher.pc
 	sed -i "s/\([-ldl .+]\) -ldl/\1/" sqlcipher.pc
@@ -105,6 +106,7 @@ binary-arch: build install
 	dh_installman -a
 	dh_installdocs -a
 	dh_installchangelogs -a
+	dh_strip -a --dbg-package=libsqlcipher0-dbg
 	dh_compress -a
 	dh_fixperms -a
 	dh_makeshlibs -a

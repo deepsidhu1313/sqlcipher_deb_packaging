@@ -1,4 +1,9 @@
 libsqlcipher.so.0 libsqlcipher0 #MINVER#
+ sqlcipherCodecAttach@Base #PACKAGE#
+ sqlcipherCodecGetKey@Base #PACKAGE#
+ sqlcipherPagerCodec@Base #PACKAGE#
+ sqlcipherPagerGetCodec@Base #PACKAGE#
+ sqlcipherPagerSetCodec@Base #PACKAGE#
  (optional)sqlcipher_activate@Base 2.0.3
  (optional)sqlcipher_cipher_profile@Base 3.2.0
  (optional)sqlcipher_codec_add_random@Base 3.2.0
@@ -6,7 +11,7 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  (optional)sqlcipher_codec_ctx_get_cipher@Base 2.1.1
  (optional)sqlcipher_codec_ctx_get_data@Base 2.0.3
  (optional)sqlcipher_codec_ctx_get_fast_kdf_iter@Base 2.1.1
- (optional)sqlcipher_codec_ctx_get_flag@Base 2.1.1
+ #MISSING: #PACKAGE##  (optional)sqlcipher_codec_ctx_get_flag@Base 2.1.1
  sqlcipher_codec_ctx_get_hmac_algorithm@Base 3.2.0-1.1
  sqlcipher_codec_ctx_get_kdf_algorithm@Base 3.2.0-1.1
  (optional)sqlcipher_codec_ctx_get_kdf_iter@Base 2.1.1
@@ -18,10 +23,10 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  (optional)sqlcipher_codec_ctx_init@Base 2.0.3
  sqlcipher_codec_ctx_integrity_check@Base 3.2.0-1.1
  (optional)sqlcipher_codec_ctx_migrate@Base 3.2.0
-#MISSING: 3.2.0-1.1# (optional)sqlcipher_codec_ctx_set_cipher@Base 2.0.3
+ #MISSING: #PACKAGE## (optional)sqlcipher_codec_ctx_set_cipher@Base 2.0.3
  (optional)sqlcipher_codec_ctx_set_error@Base 2.0.3
  (optional)sqlcipher_codec_ctx_set_fast_kdf_iter@Base 2.0.3
- (optional)sqlcipher_codec_ctx_set_flag@Base 2.1.1
+ #MISSING: #PACKAGE## (optional)sqlcipher_codec_ctx_set_flag@Base 2.1.1
  sqlcipher_codec_ctx_set_hmac_algorithm@Base 3.2.0-1.1
  sqlcipher_codec_ctx_set_kdf_algorithm@Base 3.2.0-1.1
  (optional)sqlcipher_codec_ctx_set_kdf_iter@Base 2.0.3
@@ -30,7 +35,7 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  (optional)sqlcipher_codec_ctx_set_pass@Base 2.0.3
  sqlcipher_codec_ctx_set_plaintext_header_size@Base 3.2.0-1.1
  (optional)sqlcipher_codec_ctx_set_use_hmac@Base 2.0.3
- (optional)sqlcipher_codec_ctx_unset_flag@Base 2.1.1
+ #MISSING: #PACKAGE## (optional)sqlcipher_codec_ctx_unset_flag@Base 2.1.1
  sqlcipher_codec_fips_status@Base 3.2.0-1.1
  (optional)sqlcipher_codec_get_cipher_provider@Base 2.2.1
  (optional)sqlcipher_codec_get_keyspec@Base 3.2.0
@@ -56,6 +61,7 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  (optional)sqlcipher_get_provider@Base 2.2.1
  sqlcipher_init_memmethods@Base 3.2.0-1.1
  (optional)sqlcipher_ismemset@Base 2.0.6
+ sqlcipher_log@Base #PACKAGE#
  (optional)sqlcipher_malloc@Base 2.0.3
  (optional)sqlcipher_memcmp@Base 2.0.3
  (optional)sqlcipher_memset@Base 2.1.1
@@ -72,12 +78,17 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlcipher_set_default_plaintext_header_size@Base 3.2.0-1.1
  (optional)sqlcipher_set_default_use_hmac@Base 2.0.6
  (optional)sqlcipher_set_hmac_salt_mask@Base 2.1.1
+ sqlcipher_set_log@Base #PACKAGE#
+ sqlcipher_set_log_level@Base #PACKAGE#
  sqlcipher_set_mem_security@Base 3.2.0-1.1
+ sqlcipher_vdbe_return_string@Base #PACKAGE#
+ sqlcipher_version@Base #PACKAGE#
 #MISSING: 3.2.0-1.1# sqlite3Codec@Base 1.1.9
  sqlite3_activate_see@Base 1.1.9
  sqlite3_aggregate_context@Base 1.1.9
  sqlite3_aggregate_count@Base 1.1.9
  sqlite3_auto_extension@Base 1.1.9
+ sqlite3_autovacuum_pages@Base #PACKAGE#
  sqlite3_backup_finish@Base 1.1.9
  sqlite3_backup_init@Base 1.1.9
  sqlite3_backup_pagecount@Base 1.1.9
@@ -108,6 +119,7 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_busy_handler@Base 1.1.9
  sqlite3_busy_timeout@Base 1.1.9
  sqlite3_cancel_auto_extension@Base 3.2.0
+ sqlite3_changes64@Base #PACKAGE#
  sqlite3_changes@Base 1.1.9
  sqlite3_clear_bindings@Base 1.1.9
  sqlite3_close@Base 1.1.9
@@ -145,6 +157,7 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_create_collation16@Base 1.1.9
  sqlite3_create_collation@Base 1.1.9
  sqlite3_create_collation_v2@Base 1.1.9
+ sqlite3_create_filename@Base #PACKAGE#
  sqlite3_create_function16@Base 1.1.9
  sqlite3_create_function@Base 1.1.9
  sqlite3_create_function_v2@Base 1.1.9
@@ -153,21 +166,25 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_create_window_function@Base 3.2.0-1.1
  sqlite3_data_count@Base 1.1.9
  sqlite3_data_directory@Base 2.1.1
+ sqlite3_database_file_object@Base #PACKAGE#
  sqlite3_db_cacheflush@Base 3.2.0-1.1
  sqlite3_db_config@Base 1.1.9
  sqlite3_db_filename@Base 2.0.4
  sqlite3_db_handle@Base 1.1.9
  sqlite3_db_mutex@Base 1.1.9
+ sqlite3_db_name@Base #PACKAGE#
  sqlite3_db_readonly@Base 2.0.5
  sqlite3_db_release_memory@Base 2.0.4
  sqlite3_db_status@Base 1.1.9
  sqlite3_declare_vtab@Base 1.1.9
+ sqlite3_deserialize@Base #PACKAGE#
  sqlite3_drop_modules@Base 3.2.0-1.1
  sqlite3_enable_load_extension@Base 1.1.9
  sqlite3_enable_shared_cache@Base 1.1.9
  sqlite3_errcode@Base 1.1.9
  sqlite3_errmsg16@Base 1.1.9
  sqlite3_errmsg@Base 1.1.9
+ sqlite3_error_offset@Base #PACKAGE#
  sqlite3_errstr@Base 2.2.0
  sqlite3_exec@Base 1.1.9
  sqlite3_expanded_sql@Base 3.2.0-1.1
@@ -175,16 +192,22 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_extended_errcode@Base 1.1.9
  sqlite3_extended_result_codes@Base 1.1.9
  sqlite3_file_control@Base 1.1.9
+ sqlite3_filename_database@Base #PACKAGE#
+ sqlite3_filename_journal@Base #PACKAGE#
+ sqlite3_filename_wal@Base #PACKAGE#
  sqlite3_finalize@Base 1.1.9
  sqlite3_free@Base 1.1.9
+ sqlite3_free_filename@Base #PACKAGE#
  sqlite3_free_table@Base 1.1.9
- sqlite3_fts3_may_be_corrupt@Base 3.2.0-1.1
+ #MISSING: #PACKAGE## sqlite3_fts3_may_be_corrupt@Base 3.2.0-1.1
  sqlite3_get_autocommit@Base 1.1.9
  sqlite3_get_auxdata@Base 1.1.9
  sqlite3_get_table@Base 1.1.9
  sqlite3_global_recover@Base 1.1.9
+ sqlite3_hard_heap_limit64@Base #PACKAGE#
  sqlite3_initialize@Base 1.1.9
  sqlite3_interrupt@Base 1.1.9
+ sqlite3_is_interrupted@Base #PACKAGE#
  sqlite3_key@Base 1.1.9
  sqlite3_key_v2@Base 3.2.0
  sqlite3_keyword_check@Base 3.2.0-1.1
@@ -255,6 +278,7 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_rollback_hook@Base 1.1.9
  sqlite3_rtree_geometry_callback@Base 1.1.9
  sqlite3_rtree_query_callback@Base 3.2.0
+ sqlite3_serialize@Base #PACKAGE#
  sqlite3_set_authorizer@Base 1.1.9
  sqlite3_set_auxdata@Base 1.1.9
  sqlite3_set_last_insert_rowid@Base 3.2.0-1.1
@@ -293,14 +317,17 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_test_control@Base 1.1.9
  sqlite3_thread_cleanup@Base 1.1.9
  sqlite3_threadsafe@Base 1.1.9
+ sqlite3_total_changes64@Base #PACKAGE#
  sqlite3_total_changes@Base 1.1.9
  sqlite3_trace@Base 1.1.9
  sqlite3_trace_v2@Base 3.2.0-1.1
  sqlite3_transfer_bindings@Base 1.1.9
+ sqlite3_txn_state@Base #PACKAGE#
  sqlite3_unlock_notify@Base 1.1.9
  sqlite3_update_hook@Base 1.1.9
  sqlite3_uri_boolean@Base 2.0.4
  sqlite3_uri_int64@Base 2.0.4
+ sqlite3_uri_key@Base #PACKAGE#
  sqlite3_uri_parameter@Base 1.1.9
  sqlite3_user_data@Base 1.1.9
  sqlite3_value_blob@Base 1.1.9
@@ -308,6 +335,7 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_value_bytes@Base 1.1.9
  sqlite3_value_double@Base 1.1.9
  sqlite3_value_dup@Base 3.2.0-1.1
+ sqlite3_value_encoding@Base #PACKAGE#
  sqlite3_value_free@Base 3.2.0-1.1
  sqlite3_value_frombind@Base 3.2.0-1.1
  sqlite3_value_int64@Base 1.1.9
@@ -329,12 +357,17 @@ libsqlcipher.so.0 libsqlcipher0 #MINVER#
  sqlite3_vsnprintf@Base 1.1.9
  sqlite3_vtab_collation@Base 3.2.0-1.1
  sqlite3_vtab_config@Base 1.1.9
+ sqlite3_vtab_distinct@Base #PACKAGE#
+ sqlite3_vtab_in@Base #PACKAGE#
+ sqlite3_vtab_in_first@Base #PACKAGE#
+ sqlite3_vtab_in_next@Base #PACKAGE#
  sqlite3_vtab_nochange@Base 3.2.0-1.1
  sqlite3_vtab_on_conflict@Base 1.1.9
+ sqlite3_vtab_rhs_value@Base #PACKAGE#
  sqlite3_wal_autocheckpoint@Base 1.1.9
  sqlite3_wal_checkpoint@Base 1.1.9
  sqlite3_wal_checkpoint_v2@Base 1.1.9
  sqlite3_wal_hook@Base 1.1.9
  sqlite3pager_error@Base 3.2.0-1.1
- sqlite3pager_is_mj_pgno@Base 3.2.0-1.1
+ #MISSING: #PACKAGE## sqlite3pager_is_mj_pgno@Base 3.2.0-1.1
  sqlite3pager_reset@Base 3.2.0-1.1
