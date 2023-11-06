@@ -1,4 +1,4 @@
-libsqlcipher.so.0 libsqlcipher0 4.5.5-0
+libsqlcipher.so.0 libsqlcipher0 #MINVER#
 #MISSING: 4.5.5-0~ #
  sqlcipherCodecAttach@Base 4.5.5-0~
  sqlcipherCodecGetKey@Base 4.5.5-0~
